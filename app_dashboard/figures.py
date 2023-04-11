@@ -52,7 +52,7 @@ bar_allItems.update_layout(legend_title = 'Legend',
                            yaxis_title = 'Number of Recalled Items', 
                            title = 'Overview of Recalled Items in Canada from 2011 to 2022')
 
-bar_allItems.update_xaxes(dtick="M1", tickformat="%b\nY")
+bar_allItems.update_xaxes(dtick="M1", tickformat="Y")
 
 
 # >>> Line Chart - All Items
@@ -74,10 +74,10 @@ for (df, name_df, color) in zip(list_df, labels_df, colors):
 line_allItems.update_layout(xaxis_title = 'Year', 
                             yaxis_title = 'Number of Recalled Items', 
                             legend_title = 'Legend', 
-                            title = 'Overview of Recalled Items in Candada from 2011 to 2022',
+                            title = 'Overview of Recalled Items in Canada from 2011 to 2022',
                             hovermode="x unified")
 
-line_allItems.update_xaxes(dtick="M1", tickformat="%b\nY")
+line_allItems.update_xaxes(dtick="M1", tickformat="Y")
 
 
 # >>> Pie Chart - All Items
@@ -164,7 +164,7 @@ line_food.update_layout(xaxis_title = 'Year',
                         title ='Recalled Food Items in Canada from 2011 to 2022',
                         hovermode="x")
 
-line_food.update_xaxes(dtick="M1", tickformat="%b\nY")
+line_food.update_xaxes(dtick="M1", tickformat="Y")
 
 
 # >>> Interactive plots - Pie Charts - Food
@@ -340,7 +340,7 @@ line_medical.update_layout(xaxis_title = 'Year',
                            title ='Recalled Medical Items in Canada from 2018 to 2022',
                            hovermode="x")
 
-line_medical.update_xaxes(dtick="M1", tickformat="%b\nY")
+line_medical.update_xaxes(dtick="M1", tickformat="Y")
 
 
 # >>> Bar Chart - Medical
