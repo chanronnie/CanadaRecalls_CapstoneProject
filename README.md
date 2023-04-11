@@ -1,6 +1,6 @@
 # Capstone-Project - Concordia Bootcamps
 
-For the final capstone project, I am doing an Exploratory Data Analysis on [Canada Recalls](https://recalls-rappels.canada.ca/en/search/site). The purposes of this project for my Data Science Bootcamps is to
+For the final capstone project, I am doing an Exploratory Data Analysis on [Canada Recalls](https://recalls-rappels.canada.ca/en/search/site). The purposes of this project for the Data Science Bootcamps program are to
 
 1. practice web scraping using Python and BeautifulSoup
 2. explore the library of [Plotly](https://plotly.com/) for data visualization
