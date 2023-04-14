@@ -13,9 +13,10 @@ plotly==5.14.1
 
 # for data deployment
 dash==2.9.2
-dash_bootstrap_components==1.4.1
 dash-html-components==2.0.0
 dash-core-components==2.0.0
+dash_mantine_components==0.12.1
+dash_bootstrap_components==1.4.1
 dash_iconify==0.1.2
 
 

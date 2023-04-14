@@ -50,7 +50,7 @@ for (df, name_df, color) in zip(list_df, labels_df, colors_list):
 bar_allItems.update_layout(legend_title = 'Legend', 
                            xaxis_title = 'Year', 
                            yaxis_title = 'Number of Recalled Items', 
-                           title = 'Overview of Recalled Items in Canada from 2011 to 2022')
+                           title = 'Recalled Items in Canada from 2018 to 2022')
 
 bar_allItems.update_xaxes(dtick="M1", tickformat="Y")
 
@@ -86,9 +86,12 @@ pie_allItems = go.Figure()
 all_counts = all_items['Recall Category'].value_counts()
 pie_allItems.add_trace(go.Pie(values = all_counts, 
                               labels = all_counts.index, 
-                              showlegend = False, hole = 0.4,
-                              textinfo = 'label+percent', textposition= 'inside', 
-                              marker = {'colors': px.colors.diverging.Geyser[::2]}))
+                              showlegend = True, hole = 0.4,
+                              textinfo = 'label+percent', 
+                              textposition= 'inside',
+                              textfont_size=16,
+                              marker = {'colors': px.colors.diverging.Geyser[::2]}))                              
+pie_allItems.update_layout(margin = {'t':50, 'b':50})
 
 # ********************************** PLOTS ************************************
 # *****************************************************************************
@@ -164,7 +167,7 @@ line_food.update_layout(xaxis_title = 'Year',
                         title ='Recalled Food Items in Canada from 2011 to 2022',
                         hovermode="x")
 
-line_food.update_xaxes(dtick="M1", tickformat="Y")
+line_food.update_xaxes(dtick="M1", tickformat="%b\nY")
 
 
 # >>> Interactive plots - Pie Charts - Food
@@ -208,58 +211,34 @@ allergen = pd.DataFrame(allergen['Sub Issue'].value_counts())
 
 
 # Plot Pie Charts - Food
-pie_food = go.Figure()
-pie_food.add_traces(go.Pie(values = foodIssue.Food_Issue, 
-                           labels = foodIssue.index, 
-                           showlegend = False,
-                           textinfo = 'label+percent', textposition = 'inside', 
-                           marker = {'colors': px.colors.diverging.Geyser})) 
+pie_FoodIssue = go.Figure(go.Pie(values = foodIssue.Food_Issue,
+                                 labels = foodIssue.index,
+                                 showlegend = False,
+                                 textinfo = 'label+percent', 
+                                 textposition = 'inside', 
+                                 textfont_size=16,
+                                 marker = {'colors': px.colors.diverging.Geyser}))
+pie_FoodIssue.update_layout(title ='Issues of Food Recalls', margin = {'t':60, 'b':50})
 
-pie_food.add_traces(go.Pie(values = microbiological['Sub Issue'], 
-                           labels = microbiological.index, 
-                           showlegend = False,
-                           textinfo = 'label+percent', textposition = 'inside', 
-                           marker = {'colors': px.colors.diverging.Geyser})) 
-    
-pie_food.add_traces(go.Pie(values = allergen['Sub Issue'], 
-                           labels = allergen.index, 
-                           showlegend = False,
-                           textinfo = 'label+percent', textposition = 'inside', 
-                           marker = {'colors': px.colors.diverging.Geyser})) 
 
-# set dropdown buttons
-pie_food.update_layout(
-    updatemenus=[
-        dict(
-            type = "buttons",
-            direction = "down",
-            pad = {'r':2, "t" :2},
-            showactive = True,
-            x = 0.2, xanchor = "right",
-            y = 1.1, yanchor = "top",
-            
-            buttons=list([
-                
-                dict(label="Food Issues",
-                     method="update",
-                     args=[{"visible": [True, False, False]},
-                           {"title": 'Issues of Food Recalls'}]),
-                
-                dict(label="Food Issues - Microbiological",
-                     method="update", 
-                     args=[{"visible": [False, True, False]},
-                           {"title": "Food Recalls - Microbiological Issue"}]),
-                
-                dict(label="Food Issues - Allergen",
-                     method="update", 
-                     args=[{"visible": [False, False, True]},
-                           {"title": "Food Recalls - Allergen Issue"}])
-            ]),
-        )
-    ])
+pie_Microbiological = go.Figure(go.Pie(values = microbiological['Sub Issue'],
+                                       labels = microbiological.index,
+                                       showlegend = False,
+                                       textinfo = 'label+percent', 
+                                       textposition = 'inside', 
+                                       textfont_size=16,
+                                       marker = {'colors': px.colors.diverging.Geyser}))
+pie_Microbiological.update_layout(title ='Food Recalls - Microbiological Issue', margin = {'t':60, 'b':50})
 
-# set title and x-axis
-pie_food.update_layout(title ='Issues of Food Recalls')
+
+pie_Allergen = go.Figure(go.Pie(values = allergen['Sub Issue'],
+                                 labels = allergen.index,
+                                 showlegend = False,
+                                 textinfo = 'label+percent', 
+                                 textposition = 'inside', 
+                                 textfont_size=16,
+                                 marker = {'colors': px.colors.diverging.Geyser}))
+pie_Allergen.update_layout(title ='Food Recalls - Allergen Issue', margin = {'t':60, 'b':50})
 
 # ********************************** PLOTS ************************************
 # *****************************************************************************
