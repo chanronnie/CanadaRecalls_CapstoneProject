@@ -6,11 +6,11 @@ For the final capstone project, I am doing an Exploratory Data Analysis on [Cana
 
 1. practice web scraping using Python and BeautifulSoup
 2. explore the library of [Plotly](https://plotly.com/) for data visualization
-3. learn data deployment using [Dash](https://plotly.com/dash/) for building an interactive dahsboard (that runs locally)
+3. learn data deployment using [Dash](https://plotly.com/dash/) for building an interactive dahsboard
 
 ## Data Analysis Notebook
 
-Due to some technical issue with my Jupyter notebook file, my interactive Data Analysis notebook can be read from this [link on Jovian platform](https://jovian.com/ronniekkc/canada-recalls-data-analysis).
+Since we cannot view an interactive notebook on GitHub , my Data Analysis notebook with interactive graphs can be found in this [link on Jovian platform](https://jovian.com/ronniekkc/canada-recalls-data-analysis).
 
 ## Dashboard
 
