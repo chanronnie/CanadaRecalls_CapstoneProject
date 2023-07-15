@@ -1,36 +1,48 @@
 # Data Analysis on Canada Recalls
 
-For my final capstone project of Concordia Bootcamps, I am doing an Exploratory Data Analysis on [Canada Recalls](https://recalls-rappels.canada.ca/en/search/site). The purposes of this project for the Data Science Bootcamps program are to
+This repository contains the files for my final capstone project at Concordia Data Science Bootcamp. The project focuses on analyzing Canada's recall records from 2011 to March 2023. The analysis will involve the following tasks:
 
-1. practice web scraping using Python and BeautifulSoup
-2. explore the library of [Plotly](https://plotly.com/) for data visualization
-3. learn data deployment using [Dash](https://plotly.com/dash/) and [PythonAnywhere](https://www.pythonanywhere.com/) for building an interactive dahsboard
+1. Data scraping to collect the datasets.
+2. Data cleaning to preprocess the raw data.
+3. Categorization of data into segments such as vehicles, food, customer and medical products, and issues of the recalls.
+4. Visualization of the analyzed data using Plotly.
+5. Deployment of the findings in the application (see [GitHub repo](https://github.com/chanronnie/canada-recalls-app)).
+
+
+## Table of Contents
+
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Data](#data)
+* [Contents](#contents)
+* [Dashboard Preview](#dashboard-preview)
+
+
+## Technologies
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-grey?style=for-the-badge)
 
 ## Installation
 ```
-pip install dash
+pip install beautifulsoup4
 pip install plotly
-pip install dash-bootstrap-components
-pip install dash-mantine-components
-pip install dash-iconify
 ```
-## Requirements
-- Python
-- BeautifulSoup
-- Plotly
-- Dash
+## Data
+Items recalled by the government of Canada are scrapped from the [Canada Recalls](https://recalls-rappels.canada.ca/en/search/site) website. I used Python and BeautifulSoup to perform the data scraping process.
+There are a total of 14,218 recalled items to be collected from the website covering the period from 2011 to March 2023.
 
-## Data Analysis Notebook
 
-⚠️ Since we are not able to view an interactive notebook on GitHub , 
-my Data Analysis notebook with interactive graphs can be found in this 👉 [link](https://jovian.com/ronniekkc/canada-recalls-data-analysis) on Jovian platform.
+## Contents
+* Acess the raw and processed datasets: [data](/data) 
+* View the Python code for data scraping: [Data Scraping.ipynb](Data%20Scraping.ipynb)
+* View the Python code for data cleaning: [Data Cleaning.ipynb](Data%Cleaning.ipynb)
+* View my data analysis project on Jovian: [Notebook](https://jovian.com/ronniekkc/canada-recalls-data-analysis)
 
-## Dashboard
+📍 App link: [recallsdashboard.pythonanywhere.com](https://recallsdashboard.pythonanywhere.com/)
 
-- 📈Link of my website: [here](https://recallsdashboard.pythonanywhere.com/)
-- 📂Link to my deployment app repo: [here](https://github.com/chanronnie/canada-recalls-app)
+## Dashboard Preview
+Please feel free to adjust the window size to your convenience if it appears too big.</br>
+If you encounter any issues or have suggestions, please open an issue.
 
-Please feel free to adjust the size of your window screen if the content looks toooooo BIG (ideal size: 75 %) and to play with the interactive buttons !!! 😆
+<img width="469" alt="preview5" src="https://github.com/chanronnie/CanadaRecalls_CapstoneProject/assets/121308347/4c3a8e54-7294-43b9-9a64-fade3b5c353e">
 
-Here is the preview of my dashboard
-<img width="938" alt="image" src="https://user-images.githubusercontent.com/121308347/232263128-cb49fb53-94f0-4563-a8a9-9b2a84795d72.png">
