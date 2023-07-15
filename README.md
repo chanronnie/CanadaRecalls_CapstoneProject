@@ -35,7 +35,7 @@ There are a total of 14,218 recalled items to be collected from the website cove
 ## Contents
 * Acess the raw and processed datasets: [data](/data) 
 * View the Python code for data scraping: [Data Scraping.ipynb](Data%20Scraping.ipynb)
-* View the Python code for data cleaning: [Data Cleaning.ipynb](Data%Cleaning.ipynb)
+* View the Python code for data cleaning: [Data Cleaning.ipynb](Data%20Cleaning.ipynb)
 * View my data analysis project on Jovian: [Notebook](https://jovian.com/ronniekkc/canada-recalls-data-analysis)
 
 📍 App link: [recallsdashboard.pythonanywhere.com](https://recallsdashboard.pythonanywhere.com/)
